@@ -1,0 +1,182 @@
+/* ปรับแต่งพื้นหลังและการจัดวาง */
+body {
+    font-family: 'Prompt', sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    background: rgba(246, 246, 246, 0.9);
+}
+.container {
+    
+    padding: 10px;
+}
+
+/* ปรับแต่งรูปภาพ */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+.title{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+/* ส่วนแสดงค่าเงิน */
+.currency-section {
+    background: rgba(246, 246, 246, 0.9);
+    padding: 30px 60px;
+    border-radius: 15px;
+    
+}
+
+/* ปรับแต่งปุ่มแสดงค่าเงิน */
+.currency-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(95deg, #bbdeff 0%, #2995fa 100%); /* ปรับเป็นการไล่สี */
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    height: 80px; 
+    border: none;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 50px;
+    width: 100%;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1), -4px -4px 12px rgba(255, 255, 255, 0.8); /* เงาใหม่ */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden; /* เพื่อป้องกันการหลุดออกจากขอบ */
+}
+
+.currency-btn:hover {
+    background: linear-gradient(145deg,  #2995fa 0%, #2995fa 0%); /* เปลี่ยนเมื่อ hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+.currency-btn:active {
+    transform: scale(0.98); /* เมื่อกดปุ่มจะหดตัวเล็กลง */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อกด */
+}
+
+.currency-btn img {
+    margin-right: 12px;
+    border-radius: 50%;
+    width: 36px; /* ปรับขนาดไอคอน */
+    height: 36px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.currency-btn:hover img {
+    transform: rotate(10deg); /* เมื่อ hover จะหมุนไอคอน */
+}
+
+/* เพิ่มการตั้งค่าระยะห่างระหว่างข้อความ */
+.currency-btn span {
+    margin-left: 10px;
+}
+
+.currency-flag {
+    width: 24px; /* ความกว้าง */
+    height: auto; /* ป้องกันการยืดสัดส่วน */
+    object-fit: contain; /* คงสัดส่วนของรูปภาพไว้ */
+    display: inline-block; /* ทำให้จัดวางง่ายขึ้นในปุ่ม */
+    margin-right: 5px; /* เพิ่มระยะห่างระหว่างรูปกับข้อความ */
+    vertical-align: middle; /* จัดให้อยู่แนวเดียวกับข้อความ */
+}
+
+
+/* ปรับแต่งไอคอนธง */
+.currency-btn img {
+    margin-right: 12px;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ปรับแต่งช่องค้นหา */
+.input-group {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+/* ช่องค้นหา */
+.input-group-text {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px 0 0 50px; /* ปรับขอบของปุ่มค้นหา */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+.form-control {
+    border-radius: 0 50px 50px 0; /* ปรับขอบของช่องค้นหาที่เชื่อมกับปุ่ม */
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 2px solid #eaeaea;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #aaa; /* ปรับสีของ placeholder */
+    font-style: italic;
+}
+
+/* เพิ่มการจัดวางให้เหมาะสม */
+@media (max-width: 768px) {
+    .input-group {
+        max-width: 100%;
+    }
+}
+
+
+/* ปรับแต่งปุ่มบนอุปกรณ์ขนาดกลาง */
+@media (max-width: 768px) {
+    .currency-btn {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+
+    .currency-section {
+        padding: 40px 50px;
+    }
+}
+
+/* ปรับแต่งปุ่มบนอุปกรณ์ขนาดเล็ก */
+@media (max-width: 576px) {
+    .currency-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .currency-btn img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .currency-section {
+        padding: 30px 30px;
+    }
+}
+
